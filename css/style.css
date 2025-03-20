@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+nav h1{
+    font-size: 2.5rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 5px 5px red;
+}
+
+.outer-main{
+    background-color: #548687;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.inner-main {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.continer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+
+.scoreTable{
+    width: 35%;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: 20rem;
+    max-width: 450px;
+    aspect-ratio: 1/1;
+}
+
+.box {
+    font-size: 4rem;
+    color: brown;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.box:hover {
+    background-color: #f5e8d5;
+    transform: scale(1.02);
+}
+
+.box:active {
+    transform: scale(0.98);
+}
+
+.msgContainer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+#msg {
+    color: aqua;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.hide {
+    display: none;
+}
+
+#newGame, #resetGame {
+    padding: 0.8rem ;
+    font-size: 1.2rem;
+    background-color: rgb(138, 138, 178);
+    color: white;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    margin: 1rem 0;
+}
+
+#newGame:hover, #resetGame:hover {
+    background-color: rgb(118, 118, 158);
+    transform: scale(1.05);
+}
+
+#newGame:active, #resetGame:active {
+    transform: scale(0.98);
+}
+
+.scoreTable {
+    background-color: #81b5b6;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#heading {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.tableTotalMatch, .table {
+    background-color: aqua;
+    border-collapse: collapse;
+    margin: 0.5rem auto;
+}
+
+.tableTotalMatch {
+    width: 100%;
+    max-width: 200px;
+}
+
+.table {
+    width: 100%;
+    max-width: 300px;
+}
+
+.tableTotalMatch td, .table td, .table th {
+    padding: 0.5rem;
+    text-align: center;
+    border: 2px solid #333;
+}
+
+.table th {
+    background-color: #4a7a7b;
+    color: white;
+}
+
+.highlight {
+    background-color: yellow;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { background-color: yellow; }
+    50% { background-color: orange; }
+}
+
+@media screen and (max-width: 1200px) {
+    .game {
+        max-width: 400px;
+    }
+    
+    .box {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 992px) {   
+    .game {
+        max-width: 350px;
+    }
+    
+    .box {
+        font-size: 3.5rem;
+    }
+    
+    #heading {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .continer {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .scoreTable {
+        order: 2;
+        width: 50%;
+        max-width: 400px;
+    }
+    
+    .innerContainer {
+        order: 1;
+    }
+    
+    .game {
+        max-width: 320px;
+    }
+    
+    .box {
+        font-size: 3.2rem;
+    }
+    
+    #newGame, #resetGame {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {    
+    .game {
+        max-width: 280px;
+    }
+    
+    .box {
+        font-size: 3rem;
+    }
+    
+    #heading {
+        font-size: 1.3rem;
+    }
+    
+    .tableTotalMatch td, .table td, .table th {
+        padding: 0.3rem;
+        font-size: 0.9rem;
+    }
+    
+    #msg {
+        font-size: 1.5rem;
+    }
+    
+    #newGame, #resetGame {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+}
+
+@media screen and (max-width: 360px) {    
+    .game {
+        max-width: 240px;
+    }
+    
+    .box {
+        font-size: 2.7rem;
+    }
+    
+    #heading {
+        font-size: 1.2rem;
+    }
+    
+    #msg{
+        font-size: 1rem;
+    }
+
+    .scoreTable{
+        width: 80%;
+    }
+
+    .tableTotalMatch td, .table td, .table th {
+        padding: 0.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 264px){
+
+    nav h1{
+        font-size: 1.8rem;
+    }
+
+    .game{
+        max-width: 200px;
+    }
+
+    .box{
+        font-size: 2.5rem;
+    }
+
+    #heading{
+        font-size: 0.9rem;
+    }
+
+    .msgContainer{
+        padding: 0.8rem 0.8rem;
+    }
+
+    #msg{
+        font-size: 0.6rem;
+    }
+
+    .scoreTable{
+        width: 95%;
+    }
+
+    .tableTotalMatch td, .table td, .table th{
+        font-size: 0.6rem;
+        padding: 0.3rem;
+    }
+
+    #newGame, #resetGame{
+        font-size: 0.6rem;
+        padding: 0.4rem, 0.5rem;
+    }
+
+}
+
+@media  screen and (max-width: 235px) {
+    
+    nav h1{
+        font-size: 1.5rem;
+    }
+
+    .game{
+        max-width: 160px;
+    }
+
+    .box{
+        font-size: 1.3rem;
+    }
+
+    .msgContainer{
+        padding: 0.1rem, 0;
+    }
+
+    #msg{
+        font-size: 0.8rem;
+    }
+
+    .scoreTable{
+        height: 12.5rem;
+        width: 99%;
+        padding: 0.8rem;
+    }
+
+    #heading{
+        font-size: 0.6rem;
+    }
+    .tableTotalMatch td, .table td, .table th{
+        font-size: 0.6rem;
+        padding: 0.3rem;
+    }
+    
+    .tableTotalMatch td{
+        font-size: 0.6rem;
+    }
+
+    .tableTotalMatch, .table{
+        border: none;
+    }
+
+    #newGame, #resetGame{
+        font-size: 0.5rem;
+        padding: 0.1rem, 0.3rem;
+    }
+}

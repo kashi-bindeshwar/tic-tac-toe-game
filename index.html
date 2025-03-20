@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Tic Tac Toe</h1>
+        </nav>
+    </header>
+    <div class="outer-main">
+        <div class="inner-main">
+            <div class="msgContainer hide">
+                <p id="msg">Winner</p>
+            </div>
+            <button id="newGame">New Game</button>
+            <div class="continer">
+                <div class="scoreTable">
+                    <h3 id="heading">Score table</h3>
+                    <table class="tableTotalMatch" border="7">
+                        <tbody>
+                            <tr>
+                                <td>Total Match</td>
+                                <td id="totalMatch">Data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table" border="7">
+                        <thead>
+                            <th>Players</th>
+                            <th>Score</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>O</td>
+                                <td id="Odata">data</td>
+                            </tr>
+                            <tr>
+                                <td>X</td>
+                                <td id="Xdata">data</td>
+                            </tr>
+                            <tr>
+                                <td>Draw</td>
+                                <td id="draw">data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                    <div class="game">
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <audio id="oxAudio" src="assets/sounds/oxAudio.mp3"></audio>
+                        <audio id="winAudio" src="assets/sounds/winAudio.mp3"></audio>
+                    </div>
+            </div>
+            <button id="resetGame"> Reset Game</button>
+    
+            <script src="js/script.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
